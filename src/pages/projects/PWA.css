@@ -1,0 +1,31 @@
+.pwa-mock {
+  background: #0d1620;
+  border-radius: 24px;
+  border: 1px solid var(--rose);
+  padding: 1.5rem;
+  margin: 2.5rem auto;
+  max-width: 340px;
+}
+.pwa-blob {
+  width: 120px; height: 120px;
+  border-radius: 60% 40% 55% 45% / 50% 60% 40% 50%;
+  background: radial-gradient(circle at 40% 40%, var(--rose), var(--deep-rose));
+  margin: 0 auto 1.25rem;
+  animation: blobmorph 6s ease-in-out infinite;
+  opacity: 0.9;
+}
+@keyframes blobmorph {
+  0%,100% { border-radius: 60% 40% 55% 45% / 50% 60% 40% 50%; }
+  33%      { border-radius: 40% 60% 45% 55% / 60% 40% 55% 45%; }
+  66%      { border-radius: 55% 45% 60% 40% / 45% 55% 50% 50%; }
+}
+.pwa-greeting  { font-size: 0.75rem; color: var(--rose); text-align: center; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 0.25rem; }
+.pwa-mood-text { font-family: var(--font-display); font-size: 1.1rem; color: var(--petal); text-align: center; font-style: italic; margin-bottom: 1.25rem; }
+.pwa-cards     { display: flex; gap: 0.5rem; margin-bottom: 0.75rem; }
+.pwa-card      { background: rgba(255,255,255,0.06); border-radius: 8px; padding: 0.6rem 0.75rem; flex: 1; }
+.pwa-card-label { font-size: 0.55rem; color: var(--rose); letter-spacing: 0.08em; text-transform: uppercase; display: block; margin-bottom: 0.25rem; }
+.pwa-card-val  { font-size: 1rem; font-weight: 500; color: var(--petal); font-family: var(--font-display); }
+.pwa-chart     { background: rgba(255,255,255,0.04); border-radius: 8px; padding: 0.75rem; }
+.pwa-chart-label { font-size: 0.55rem; color: var(--rose); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.5rem; display: block; }
+.pwa-bars      { display: flex; gap: 4px; align-items: flex-end; height: 36px; }
+.pwa-bar       { flex: 1; border-radius: 2px 2px 0 0; background: var(--deep-rose); opacity: 0.7; }

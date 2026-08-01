@@ -1,0 +1,66 @@
+.hob-header {
+  max-width: 900px; margin: 0 auto;
+  padding: 4.5rem 2rem 3rem;
+  border-bottom: 1px solid var(--petal);
+}
+.hob-eyebrow { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--deep-rose); margin-bottom: 1rem; }
+.hob-title { font-family: var(--font-display); font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 600; color: var(--ink); line-height: 1.1; margin-bottom: 1rem; }
+.hob-title em { font-style: italic; color: var(--deep-rose); }
+.hob-subtitle { font-size: 1rem; font-weight: 300; color: var(--ink-soft); line-height: 1.7; max-width: 520px; }
+
+.hob-content { max-width: 900px; margin: 0 auto; padding: 0 2rem 5rem; }
+
+.hob-section { padding: 3rem 0; }
+.hob-divider { border: none; border-top: 1px solid var(--petal); }
+.hob-label { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--rose); margin-bottom: 0.75rem; display: block; }
+.hob-title-sm { font-family: var(--font-display); font-size: 2rem; font-weight: 600; color: var(--ink); margin-bottom: 1.25rem; line-height: 1.15; }
+.hob-title-sm em { font-style: italic; color: var(--deep-rose); }
+.hob-body { font-size: 0.95rem; font-weight: 300; color: var(--ink-soft); line-height: 1.85; max-width: 620px; margin-bottom: 1.5rem; }
+
+.two-col   { display: grid; grid-template-columns: 1fr 1fr;       gap: 1rem; margin: 1.5rem 0; }
+.three-col { display: grid; grid-template-columns: 1fr 1fr 1fr;   gap: 1rem; margin: 1.5rem 0; }
+
+.hob-note {
+  background: rgba(241, 243, 245,0.85);
+  border: 1px solid var(--petal);
+  border-left: 3px solid var(--rose);
+  border-radius: 0 4px 4px 0;
+  padding: 0.85rem 1.25rem;
+  font-size: 0.875rem; font-weight: 300; color: var(--ink-soft);
+  line-height: 1.65; margin-bottom: 1.25rem;
+}
+.hob-note strong { color: var(--ink); font-weight: 500; }
+
+/* Writing cards */
+.writing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin: 1.5rem 0; }
+.writing-card {
+  background: rgba(241, 243, 245,0.85); border: 1px solid var(--petal);
+  border-radius: 4px; padding: 1.5rem;
+  text-decoration: none; color: inherit;
+  transition: border-color 0.2s, transform 0.2s;
+  display: block;
+}
+.writing-card:hover { border-color: var(--rose); transform: translateY(-2px); }
+.writing-source { font-size: 0.65rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--deep-rose); margin-bottom: 0.5rem; display: block; }
+.writing-type   { font-size: 0.65rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 0.75rem; display: block; }
+.writing-title  { font-family: var(--font-display); font-size: 1.3rem; font-weight: 600; color: var(--ink); margin-bottom: 0.5rem; line-height: 1.2; }
+.writing-desc   { font-size: 0.82rem; font-weight: 300; color: var(--ink-soft); line-height: 1.6; }
+.writing-arrow  { display: block; font-size: 0.75rem; color: var(--deep-rose); margin-top: 1rem; letter-spacing: 0.04em; }
+
+/* Games */
+.games-row { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1.25rem 0; }
+.game-chip { background: rgba(241, 243, 245,0.85); border: 1px solid var(--petal); border-radius: 4px; padding: 0.5rem 1rem; font-size: 0.82rem; color: var(--ink-soft); font-weight: 300; }
+.game-chip.current { border-color: var(--rose); color: var(--deep-rose); font-weight: 400; }
+
+/* Books */
+.books-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+.book-card { background: rgba(241, 243, 245,0.85); border: 1px solid var(--petal); border-radius: 4px; padding: 1rem 0.75rem; text-align: center; }
+.book-spine { width: 100%; aspect-ratio: 2/3; border-radius: 2px; margin-bottom: 0.75rem; display: flex; align-items: center; justify-content: center; }
+.book-title  { font-family: var(--font-display); font-size: 0.8rem; font-weight: 600; color: var(--ink); line-height: 1.3; margin-bottom: 0.2rem; }
+.book-author { font-size: 0.65rem; font-weight: 300; color: var(--ink-soft); }
+
+@media (max-width: 640px) {
+  .writing-grid, .two-col { grid-template-columns: 1fr; }
+  .three-col { grid-template-columns: 1fr 1fr; }
+  .books-grid { grid-template-columns: repeat(3, 1fr); }
+}

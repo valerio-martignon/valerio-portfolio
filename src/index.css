@@ -1,0 +1,165 @@
+/* ============================================================
+   DESIGN TOKENS
+   All colours, fonts, and spacing live here.
+   Change these to retheme the whole site.
+   ============================================================ */
+:root {
+  --blush:     #F1F3F5;
+  --petal:     #DCE3EA;
+  --rose:      #7C93AA;
+  --deep-rose: #2F5D8A;
+  --berry:     #1B3A5C;
+  --ink:       #1F2226;
+  --ink-soft:  #4E5A66;
+
+  --font-display: 'Fraunces', serif;
+  --font-body:    'DM Sans', sans-serif;
+}
+
+/* ============================================================
+   RESET & BASE
+   ============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--blush);
+  color: var(--ink);
+  min-height: 100vh;
+  /* Blueprint graph-paper background — the site's signature texture */
+  background-image:
+    linear-gradient(var(--rose) 1px, transparent 1px),
+    linear-gradient(90deg, var(--rose) 1px, transparent 1px);
+  background-size: 32px 32px;
+  background-attachment: fixed;
+}
+
+a { color: inherit; }
+img { max-width: 100%; display: block; }
+
+/* ============================================================
+   SHARED UTILITY CLASSES
+   Used across multiple pages
+   ============================================================ */
+
+/* --- Buttons --- */
+.btn-primary {
+  display: inline-block;
+  background: var(--deep-rose);
+  color: white;
+  padding: 0.65rem 1.5rem;
+  border-radius: 2px;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn-primary:hover { background: var(--berry); }
+
+.btn-ghost {
+  display: inline-block;
+  background: transparent;
+  color: var(--deep-rose);
+  padding: 0.65rem 1.5rem;
+  border-radius: 2px;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 400;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  border: 1px solid var(--rose);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn-ghost:hover { border-color: var(--deep-rose); background: var(--petal); }
+
+/* --- Tags --- */
+.tag {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--deep-rose);
+  background: var(--petal);
+  padding: 0.2rem 0.5rem;
+  border-radius: 2px;
+}
+.tag-outline {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  background: transparent;
+  border: 1px solid var(--rose);
+  padding: 0.2rem 0.5rem;
+  border-radius: 2px;
+}
+.tag-win {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: white;
+  background: var(--deep-rose);
+  padding: 0.2rem 0.5rem;
+  border-radius: 2px;
+}
+.tag-wip {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: white;
+  background: var(--deep-rose);
+  padding: 0.2rem 0.5rem;
+  border-radius: 2px;
+}
+
+/* --- Divider --- */
+.divider {
+  border: none;
+  border-top: 1px solid var(--petal);
+  margin: 2.5rem 0;
+}
+
+/* --- Photo placeholders (remove once you add real images) --- */
+.photo-placeholder-box {
+  background: var(--petal);
+  border: 1px dashed var(--rose);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+.photo-placeholder-box span {
+  font-size: 0.7rem;
+  color: var(--deep-rose);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 500;
+}
+.photo-placeholder-box code {
+  font-size: 0.65rem;
+  color: var(--ink-soft);
+  background: rgba(255,255,255,0.6);
+  padding: 0.15rem 0.4rem;
+  border-radius: 2px;
+  font-family: monospace;
+}
